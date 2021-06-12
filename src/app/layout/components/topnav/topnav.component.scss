@@ -1,0 +1,88 @@
+@import 'src/app/styles/colors';
+@import 'src/app/styles/font';
+@import 'src/app/styles/variables';
+
+
+.email-button {
+    background-color: $blue;
+    box-shadow: none;
+    margin-left: 16px;
+  
+    &__icon {
+      color: $white-35;
+    }}
+
+    .user-menu-icon {
+        color: $light-grey;
+        margin-right: 16px;
+        opacity: .8;
+      }
+
+      .user-menu {
+        &__item-title {
+          color: $light-grey;
+      
+          &:hover {
+            color: $dark-grey;
+            background-color: $blue-white;
+      
+            & .user-menu-icon {
+              color: #536DFE;
+            }
+          }
+        }
+      }
+
+:host {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    
+}
+.nav-brand {
+    width: 215px;
+    text-align: center;
+    color: white;
+    margin-left: 32px;
+  
+}
+.topnav-icon {
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+}
+
+.nav-spacer {
+    flex: 1 1 auto;
+}
+
+.visible-md {
+    display: none;
+}
+.visible-sm {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .visible-md {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    .visible-sm {
+        display: block;
+    }
+    .nav-brand {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hidden-sm {
+        display: none;
+    }
+}

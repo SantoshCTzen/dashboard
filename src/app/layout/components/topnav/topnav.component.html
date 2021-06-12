@@ -1,0 +1,43 @@
+<mat-toolbar   style="background-color: #536DFE" class="fix-nav">
+    <button class="header__title-button" mat-mini-fab (click)="toggleSidebar()">
+        <mat-icon *ngIf="!isMenuOpened" class="header__title-button-icon">menu</mat-icon>
+        <mat-icon *ngIf="isMenuOpened" class="header__title-button-icon">arrow_back</mat-icon>  
+    </button>
+  
+    <h6 class="nav-brand">CT Hospital Admin</h6>
+    <span class="nav-spacer"></span>
+     <form class="hidden-sm">
+        <mat-form-field>
+            <input matInput [placeholder]="'Search' | translate">
+        </mat-form-field>
+    </form>
+
+    <button class="email-button" xPosition="before" >
+        <mat-icon matBadge="4" matBadgeColor="warn">mail_outline</mat-icon>
+      </button> 
+
+    <button class="user-button" mat-icon-button [matMenuTriggerFor]="profile">
+        <mat-icon class="user-button__icon">person</mat-icon>
+    </button>
+
+    <mat-menu #profile="matMenu" xPosition="before">
+        <button mat-menu-item class="user-menu__item-title">
+            <mat-icon class="user-menu-icon">person</mat-icon>
+            <span>{{ 'Profile' | translate }}</span>
+        </button>
+        
+        <button mat-menu-item class="user-menu__item-title">
+            <mat-icon class="user-menu-icon">inbox</mat-icon>
+            <span>{{ 'Inbox' | translate }}</span>
+        </button>
+
+        <button mat-menu-item class="user-menu__item-title">
+            <mat-icon class="user-menu-icon"> settings</mat-icon>
+            <span>{{ 'Settings' | translate }}</span>
+        </button>
+
+    </mat-menu>
+    <button mat-icon-button (click)="onLoggedout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
+</mat-toolbar>

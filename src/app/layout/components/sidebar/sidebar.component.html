@@ -1,0 +1,48 @@
+<div id="sidebar">
+<mat-list>
+    <mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
+      <mat-icon>home</mat-icon> Dashboard
+    
+    </mat-list-item>
+    <mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen1']">
+      <mat-icon>person</mat-icon> Patients
+    </mat-list-item>
+    <mat-list-item [routerLinkActive]="'active'" [routerLink]="['/screen2']">
+      <mat-icon>group</mat-icon> Doctors
+    </mat-list-item>
+    <mat-list-item  routerLinkActive="active">
+      <mat-icon>notifications_none</mat-icon> Notification
+    </mat-list-item>
+    <mat-list-item routerLink="active">
+      <mat-icon>calendar_today</mat-icon> Appointments
+    </mat-list-item>
+     
+  </mat-list>
+  
+  <p class="sidebar-title">Help</p>
+  
+  <mat-list>
+    
+      <mat-list-item>
+        <mat-icon>library_books</mat-icon> Library
+      </mat-list-item>
+  
+   
+      <mat-list-item>
+        <mat-icon>question_answer</mat-icon> Support
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>help_outline</mat-icon> FAQ
+      </mat-list-item>
+
+  </mat-list>
+  
+  <p class="sidebar-title">Projects</p>
+  
+  <mat-list>
+    <mat-list-item> <div class="project-circle project-circle_yellow"></div> My resend </mat-list-item>
+    <mat-list-item> <div class="project-circle project-circle_blue"></div> Starred</mat-list-item>
+    <mat-list-item> <div class="project-circle project-circle_pink"></div> Background </mat-list-item>
+  </mat-list>
+  
+</div>
